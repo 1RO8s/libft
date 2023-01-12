@@ -6,7 +6,7 @@
 /*   By: hnagasak <hnagasak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 23:57:30 by hnagasak          #+#    #+#             */
-/*   Updated: 2023/01/13 02:32:48 by hnagasak         ###   ########.fr       */
+/*   Updated: 2023/01/13 02:43:01 by hnagasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,17 @@
 
 int	ft_isupper(int c)
 {
-	if ('A' <= c && c <= 'Z')
-		return (1);
-	return (0);
+	return ('A' <= c && c <= 'Z');
 }
 
 int	ft_islower(int c)
 {
-	if ('a' <= c && c <= 'z')
-		return (1);
-	return (0);
+	return ('a' <= c && c <= 'z');
 }
 
 int	ft_isalpha(int c)
 {
-	if (ft_isupper(c) || ft_islower(c))
-		return (1);
-	return (0);
+	return (ft_isupper(c) || ft_islower(c));
 }
 
 // int main(void)
