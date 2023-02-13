@@ -6,15 +6,17 @@
 /*   By: hnagasak <hnagasak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 19:41:07 by hnagasak          #+#    #+#             */
-/*   Updated: 2023/02/13 07:09:32 by hnagasak         ###   ########.fr       */
+/*   Updated: 2023/02/13 08:40:56 by hnagasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    unsigned char *p = s;
-    while (n--)
-        *(p++) = (unsigned char) 0;
+	unsigned char	*p;
+
+	p = s;
+	while (n--)
+		*(p++) = (unsigned char)0;
 }
