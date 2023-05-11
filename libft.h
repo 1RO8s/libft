@@ -6,7 +6,7 @@
 /*   By: hnagasak <hnagasak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 06:14:48 by hnagasak          #+#    #+#             */
-/*   Updated: 2023/05/02 17:55:57 by hnagasak         ###   ########.fr       */
+/*   Updated: 2023/05/11 22:03:18 by hnagasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ size_t	ft_strlcat(\
 	char *restrict dst, const char *restrict src, size_t dstsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 #endif

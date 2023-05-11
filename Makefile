@@ -17,6 +17,8 @@ ft_tolower.c\
 ft_toupper.c\
 ft_strlcat.c\
 ft_strlcpy.c\
+ft_strchr.c\
+ft_strrchr.c\
 main.c
 
 # 生成したいオブジェクト
