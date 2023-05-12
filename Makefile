@@ -19,6 +19,7 @@ ft_strlcat.c\
 ft_strlcpy.c\
 ft_strchr.c\
 ft_strrchr.c\
+ft_strncmp.c\
 main.c
 
 # 生成したいオブジェクト
