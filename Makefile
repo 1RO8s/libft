@@ -21,6 +21,7 @@ ft_strchr.c\
 ft_strrchr.c\
 ft_strncmp.c\
 ft_memchr.c\
+ft_memcmp.c\
 main.c
 
 # 生成したいオブジェクト
