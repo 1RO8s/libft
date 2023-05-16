@@ -6,7 +6,7 @@
 /*   By: hnagasak <hnagasak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 06:23:58 by hnagasak          #+#    #+#             */
-/*   Updated: 2023/05/16 10:50:39 by hnagasak         ###   ########.fr       */
+/*   Updated: 2023/05/16 10:52:49 by hnagasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(const char *str)
 {
-	int				sign;
+	int		sign;
 	long	nbr;
 
 	nbr = 0;
@@ -31,10 +31,9 @@ int	ft_atoi(const char *str)
 			break ;
 		nbr *= 10;
 		nbr += (*str - '0');
-		if (!(-2147483648 < (sign * nbr) && (sign
-					* nbr) < 2147483647))
+		if (!(-2147483648 < (sign * nbr) && (sign * nbr) < 2147483647))
 			return (-1);
 		str++;
 	}
-	return (sign * (int )nbr);
+	return (sign * (int)nbr);
 }
