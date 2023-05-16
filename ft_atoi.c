@@ -6,12 +6,11 @@
 /*   By: hnagasak <hnagasak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 06:23:58 by hnagasak          #+#    #+#             */
-/*   Updated: 2023/05/15 07:31:28 by hnagasak         ###   ########.fr       */
+/*   Updated: 2023/05/16 00:59:23 by hnagasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {
@@ -32,10 +31,7 @@ int	ft_atoi(const char *str)
 			break ;
 		nbr *= 10;
 		nbr += (*str - '0');
-		printf("ret = %ld, ", (long)(sign * (int)nbr));
-		printf("range = %d \n", (-2147483647 < (sign * (int)nbr)));
-		if (!(-2147483648 < (sign * (int)nbr) && (sign
-					* (int)nbr) < 2147483647))
+		if (!(-2147483648 < (sign * (int)nbr) && (sign * (int)nbr) < 2147483647))
 			return (-1);
 		str++;
 	}
