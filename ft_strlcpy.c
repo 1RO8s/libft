@@ -6,13 +6,13 @@
 /*   By: hnagasak <hnagasak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 18:42:57 by hnagasak          #+#    #+#             */
-/*   Updated: 2023/05/11 21:43:35 by hnagasak         ###   ########.fr       */
+/*   Updated: 2023/05/17 16:13:59 by hnagasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	char	*dst_end;
 	size_t	idx;
