@@ -1,7 +1,7 @@
 # 実行ファイル名
 NAME	= libft.a
 
-# コンパイル対象ファイル。 \ で改行できる。
+# コンパイル対象ファイル
 SRCS = \
 ft_isalpha.c\
 ft_isdigit.c\
@@ -29,7 +29,8 @@ ft_strdup.c\
 ft_substr.c\
 ft_strjoin.c\
 ft_strtrim.c\
-main.c
+ft_split.c\
+
 
 # 生成したいオブジェクト
 OBJS	= $(SRCS:.c=.o)
@@ -38,14 +39,13 @@ OBJS	= $(SRCS:.c=.o)
 CC		= gcc
 
 # コンパイルオプション
-CFLAG	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror
 
-# インクルードファイルパス
-INCLUDE	= -I./include
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
-
-$(NAME):
-	$(CC) $(CFLAG) $(SRCS) -o $(NAME)
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: all
 all: ${NAME}
