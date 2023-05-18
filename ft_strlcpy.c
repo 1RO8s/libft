@@ -6,7 +6,7 @@
 /*   By: hnagasak <hnagasak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 18:42:57 by hnagasak          #+#    #+#             */
-/*   Updated: 2023/05/17 16:13:59 by hnagasak         ###   ########.fr       */
+/*   Updated: 2023/05/19 05:44:20 by hnagasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,18 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	char	*dst_end;
-	size_t	idx;
-	size_t	cpylen;
+	size_t	i;
+	size_t	srclen;
 
-	cpylen = ft_strlen(src);
-	dst_end = dst;
-	idx = 1;
-	while (idx < dstsize && *src != '\0')
+	srclen = ft_strlen(src);
+	i = 0;
+	if (dstsize <= 0)
+		return (srclen);
+	while (i + 1 < dstsize && *src != '\0')
 	{
-		*dst_end = *src;
-		dst_end++;
-		src++;
-		idx++;
+		dst[i] = src[i];
+		i++;
 	}
-	*dst_end = '\0';
-	return (cpylen);
+	dst[i] = '\0';
+	return (srclen);
 }
