@@ -34,6 +34,7 @@ ft_itoa.c\
 ft_strmapi.c\
 ft_striteri.c\
 ft_putchar_fd.c\
+ft_putstr_fd.c\
 
 # 生成したいオブジェクト
 OBJS	= $(SRCS:.c=.o)
