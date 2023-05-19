@@ -6,7 +6,7 @@
 /*   By: hnagasak <hnagasak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 19:13:57 by hnagasak          #+#    #+#             */
-/*   Updated: 2023/05/19 14:17:38 by hnagasak         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:36:28 by hnagasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 char	*ft_strchr(const char *s, int c)
 {
 	const char		*result;
-	unsigned char	ch;
+	char	ch;
 
-	ch = (unsigned char)c;
+	ch = (char)c;
 	result = s;
 	while (*result != '\0')
 	{
