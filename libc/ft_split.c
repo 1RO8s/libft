@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hnagasak <hnagasak@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: hnagasak <hnagasak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:39:08 by hnagasak          #+#    #+#             */
-/*   Updated: 2023/05/18 03:35:13 by hnagasak         ###   ########.fr       */
+/*   Updated: 2023/05/22 16:42:43 by hnagasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ char	**ft_split(char const *s, char c)
 			return (NULL);
 		i++;
 	}
+	result[i] = NULL;
 	return (result);
 }

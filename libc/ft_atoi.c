@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hnagasak <hnagasak@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: hnagasak <hnagasak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 06:23:58 by hnagasak          #+#    #+#             */
-/*   Updated: 2023/05/21 16:42:23 by hnagasak         ###   ########.fr       */
+/*   Updated: 2023/05/22 01:55:23 by hnagasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	is_space(char c)
 {
@@ -37,12 +36,13 @@ int	ft_atoi(const char *str)
 	}
 	while ('0' <= *str && *str <= '9')
 	{
-		if (LONG_MAX / 10 <= sign * nbr && LONG_MAX % 10 < (*str - '0'))
-			return (sign * (int)nbr);
-		if (LONG_MIN / 10 >= sign * nbr && -1 * (LONG_MIN % 10) < (*str - '0'))
+		if ((LONG_MAX / 10 < sign * nbr) || (LONG_MAX / 10 <= sign * nbr
+				&& LONG_MAX % 10 < (*str - '0')))
+			return ((int)LONG_MAX);
+		if ((LONG_MIN / 10 > sign * nbr) || (LONG_MIN / 10 >= sign * nbr && -1
+				* (LONG_MIN % 10) < (*str - '0')))
 			return ((int)LONG_MIN);
-		nbr *= 10;
-		nbr += (*str - '0');
+		nbr = (nbr * 10) + (*str - '0');
 		str++;
 	}
 	return (sign * (int)nbr);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hnagasak <hnagasak@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: hnagasak <hnagasak@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 18:42:57 by hnagasak          #+#    #+#             */
-/*   Updated: 2023/05/19 05:44:20 by hnagasak         ###   ########.fr       */
+/*   Updated: 2023/05/22 16:43:09 by hnagasak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	if (dstsize <= 0)
 		return (srclen);
-	while (i + 1 < dstsize && *src != '\0')
+	while (i + 1 < dstsize && src[i] != '\0')
 	{
 		dst[i] = src[i];
 		i++;
